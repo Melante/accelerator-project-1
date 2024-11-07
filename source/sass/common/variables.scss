@@ -1,0 +1,29 @@
+:root {
+  --font-basic: "Roboto", "Arial", sans-serif;
+  --font-secondary: "Alumni", "Roboto", "Arial", sans-serif;
+  --text-primary: #102654;
+  --text-primary-light: #ffffff;
+  --text-secondary: #103aae;
+  --text-secondary-gradient: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+  --button-border-light: #ffffff;
+  --button-border-dark: #102654;
+  --button-border-verydark: #000000;
+  --button-border-dark-secondary: #1c3374;
+  --button-gradient: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  --button-tab: #d10a42;
+  --back-primary: #ffffff;
+  --back-secondary: #f8f9fc;
+  --back-banner: #ed0233;
+  --back-dark: #102654;
+  --back-hero: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+  --back-footer: #030a1a;
+  --back-secondary-dark: #1c3374;
+  --icon-light: #ffffff;
+  --icon-dark: #102654;
+  --form-primary: #ffffff;
+  --form-error: #ff121f;
+}
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1366px;
