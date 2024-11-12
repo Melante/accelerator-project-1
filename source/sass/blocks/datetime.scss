@@ -1,0 +1,72 @@
+.datetime {
+  display: grid;
+  gap: 5px;
+
+  @media (min-width: $tablet-width) {
+    gap: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+    min-width: 95px;
+    gap: 12px;
+  }
+}
+
+
+.datetime__title {
+  margin: 0;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  border-bottom: 1px solid var(--button-border-light, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 1.33;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.datetime__value {
+  display: flex;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 1;
+  }
+}
+
+.datetime__value span {
+  margin: 0;
+  margin-left: 4px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 1.57;
+    margin-left: 6px;
+  }
+}
+
+.datetime__time {
+  margin-top: -5px;
+}

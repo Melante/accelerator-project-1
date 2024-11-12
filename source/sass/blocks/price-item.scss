@@ -2,19 +2,21 @@
   position: relative;
   display: grid;
   gap: 18px;
+  width: 100%;
   padding: 50px 42px;
   margin: 0 auto;
   background-color: var(--back-primary, #ffffff);
 
   @media (min-width: $tablet-width) {
-    min-width: 380px;
+    min-width: 360px;
+    max-width: 380px;
     padding: 65px 65px 70px;
     gap: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 360px;
-    max-width: 400px;
+    min-width: 340px;
+    max-width: 360px;
     gap: 17px;
   }
 }
@@ -118,6 +120,7 @@
 }
 
 .price-item__button {
+  color: var(--text-primary, #102654);
   z-index: 1; // нужен, чтобы белый фон при наведении не перекрывал текст
 
   @media (min-width: $desktop-width) {
