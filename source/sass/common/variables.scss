@@ -4,6 +4,7 @@
   --text-primary: #102654;
   --text-primary-light: #ffffff;
   --text-secondary: #103aae;
+  --text-back: #e8e8e8;
   --text-secondary-gradient: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
   --button-border-light: #ffffff;
   --button-border-dark: #102654;
@@ -24,6 +25,10 @@
   --form-error: #ff121f;
 }
 
-$mobile-width: 320px;
-$tablet-width: 768px;
 $desktop-width: 1366px;
+$tablet-width: 768px;
+$mobile-width: 320px;
+
+@media (min-width: $tablet-width){}
+
+@media (min-width: $desktop-width){}

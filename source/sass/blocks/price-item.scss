@@ -1,0 +1,126 @@
+.price-item {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  padding: 50px 42px;
+  margin: 0 auto;
+  background-color: var(--back-primary, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    min-width: 380px;
+    padding: 65px 65px 70px;
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 360px;
+    max-width: 400px;
+    gap: 17px;
+  }
+}
+
+.price-item:hover,
+.price-item:focus {
+  border: none;
+  box-shadow: 0 0 0 7px none  inset;
+  background: var(--text-secondary-gradient, linear-gradient(129deg, #d10a42 0%, #0041ca 100%));
+}
+
+.price-item:hover::before,
+.price-item:focus::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  background: var(--back-primary, #ffffff);
+}
+
+.price-item__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  margin: 0;
+  z-index: 1; // нужен, чтобы белый фон при наведении не перекрывал текст
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+  }
+}
+
+
+.price-item__time {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.57;
+  z-index: 1; // нужен, чтобы белый фон при наведении не перекрывал текст
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.price-item__value {
+  position: relative;
+  margin: 0;
+}
+
+.price-item__back {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1.5;
+  color: var(--text-back, #e8e8e8);
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+    line-height: 1.5;
+  }
+}
+
+.price-item__price {
+  position: absolute;
+  bottom: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  color: var(--text-secondary, #103aae);
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 1.5;
+    gap: 14px;
+  }
+}
+
+.price-item__price::after {
+  content: "";
+  display: block;
+  background-image: url("/__spritemap#sprite-price-view");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 42px;
+  }
+}
+
+.price-item__button {
+  z-index: 1; // нужен, чтобы белый фон при наведении не перекрывал текст
+
+  @media (min-width: $desktop-width) {
+    padding: 25px;
+  }
+}

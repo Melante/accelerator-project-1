@@ -11,7 +11,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding: 22px;
   }
 }
@@ -47,13 +47,13 @@
   background-color: var(--back-primary, #ffffff);
 
   &:hover {
-    background-color: var(--button-gradient, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+    background: var(--button-gradient, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
     color: var(--text-primary-light, #ffffff);
   }
 
   &:focus {
     border: 2px solid var(--button-border-verydark, #000000);
-    background-color: linear-gradient(151deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
+    background: linear-gradient(151deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
   }
 
   &:active {

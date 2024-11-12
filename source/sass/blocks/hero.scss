@@ -1,84 +1,87 @@
 .hero {
   color: var(--text-primary-light, #ffffff);
-  padding-top: 30px;
-  padding-bottom: 120px;
   display: grid;
+  padding-top: 16px;
+  padding-bottom: 32px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
     padding-bottom: 100px;
   }
 
-  @media (max-width: $mobile-width) {
-    padding-top: 16px;
-    padding-bottom: 32px;
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 120px;
   }
 }
 
 .hero__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 64px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 30px;
   }
 
-  @media (max-width: $mobile-width) {
-    margin-bottom: 64px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
   }
 }
 
 .hero__promo {
   display: grid;
-  grid-template-columns: 46% 44%;
-  gap: 54px;
   align-items: center;
-  padding-top: 30px;
+  grid-template-columns: 1fr;
+  gap: 0;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     padding: 0;
   }
 
-  @media (max-width: $mobile-width) {
-    grid-template-columns: 1fr;
-    gap: 0;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 46% 44%;
+    gap: 54px;
+    padding-top: 30px;
   }
 }
 
+
 .hero__logo {
   display: block;
-  width: 130px;
-  height: 26px;
+  width: 100px;
+  height: 20px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 110px;
     height: 22px;
   }
 
-  @media (max-width: $mobile-width) {
-    width: 100px;
-    height: 20px;
+  @media (min-width: $desktop-width) {
+    width: 130px;
+    height: 26px;
   }
 }
 
 .hero__phone {
   margin: 0;
   padding: 0;
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 22px;
   line-height: 1;
+  font-weight: 700;
   text-decoration: none;
   color: var(--text-primary-light, #ffffff);
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 1;
   }
 
-  @media (max-width: $mobile-width) {
-    font-size: 22px;
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+
     line-height: 1;
   }
 }
@@ -88,40 +91,44 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   text-align: right;
-  min-width: 385px;
+  gap: 20px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     gap: 25px;
     min-width: auto;
   }
 
-  @media (max-width: $mobile-width) {
-    gap: 20px;
+  @media (min-width: $desktop-width) {
+    gap: 0;
+    min-width: 385px;
   }
 }
 
 .hero__description {
-  font-size: 14px;
-  line-height: 1.57;
   font-weight: 400;
   margin: 0;
-  margin-top: 70px;
+  margin-top: 81px;
+  font-size: 14px;
+  line-height: 1.42;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-top: 81px;
+    line-height: 1.57;
   }
 
-  @media (max-width: $mobile-width) {
-    line-height: 1.42;
+  @media (min-width: $desktop-width) {
+    line-height: 1.57;
+
+    margin-top: 70px;
   }
 }
 
 .hero-contain {
-  min-width: 270px;
+  min-width: auto;
+  gap: 10px;
 
-  @media (max-width: $tablet-width) {
-    min-width: auto;
-    gap: 10px;
+  @media (min-width: $desktop-width) {
+    min-width: 270px;
   }
 }
 
@@ -129,75 +136,82 @@
 .hero__city {
   font-family: var(--font-secondary, --font-basic);
   font-weight: 600;
-  font-size: 54px;
-  line-height: 1;
   margin: 0;
-  margin-bottom: 40px;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 14px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 1;
     margin-bottom: 10px;
   }
 
-  @media (max-width: $mobile-width) {
-    font-size: 32px;
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
     line-height: 1;
-    margin-bottom: 14px;
+    margin-bottom: 40px;
   }
 }
 
 .hero__title {
   font-family: var(--font-secondary, --font-basic);
   font-weight: 800;
-  font-size: 92px;
-  line-height: 1.2;
-  margin: 0;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: 40px;
+  margin: 0;
+  font-size: 62px;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 72px;
     line-height: 1.18;
     letter-spacing: 2px;
     margin-bottom: 25px;
   }
 
-  @media (max-width: $mobile-width) {
-    font-size: 62px;
-    line-height: 1;
-    letter-spacing: 1px;
-    margin-bottom: 28px;
+  @media (min-width: $desktop-width) {
+    font-size: 92px;
+    line-height: 1.2;
+
+
+    letter-spacing: 4px;
+    margin-bottom: 40px;
   }
 }
 
 .hero__img {
-  display: block;
-  width: 500px;
-  height: 524px;
+  display: none;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    display: block;
     width: 324px;
     height: 390px;
   }
 
-  @media (max-width: $mobile-width) {
-    display: none;
+  @media (min-width: $desktop-width) {
+    width: 500px;
+    height: 524px;
   }
 }
 
 .hero__button {
-  min-width: 270px;
-
   grid-column: 1 / -1;
-  margin-left: auto;
+  width: 100%;
+  padding: 22px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    grid-column: 2 /2;
+    padding: 20px;
     min-width: 185px;
   }
 
-  @media (max-width: $mobile-width) {
-    width: 100%;
+  @media (min-width: $desktop-width) {
+    min-width: 270px;
+    padding: 25px;
+
+
+    margin-left: auto;
   }
 }
