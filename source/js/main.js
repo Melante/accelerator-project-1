@@ -4,3 +4,4 @@
 // import 'swiper/css';
 
 import './tabs.js';
+import './main-swiper.js';

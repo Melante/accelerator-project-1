@@ -5,6 +5,7 @@
   --text-primary-light: #ffffff;
   --text-secondary: #103aae;
   --text-back: #e8e8e8;
+  --text-card: #b6bdcc;
   --text-secondary-gradient: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
   --button-border-light: #ffffff;
   --button-border-dark: #102654;
@@ -28,7 +29,3 @@
 $desktop-width: 1366px;
 $tablet-width: 768px;
 $mobile-width: 320px;
-
-@media (min-width: $tablet-width){}
-
-@media (min-width: $desktop-width){}
