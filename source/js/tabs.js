@@ -5,7 +5,7 @@ const tabContents = document.querySelectorAll('.price__list');
 tabLinks.forEach((link) => {
   link.addEventListener('click', () => {
 
-    tabLinks.forEach(() => link.classList.remove('active'));
+    tabLinks.forEach((link) => link.classList.remove('active'));
 
     link.classList.add('active');
 
