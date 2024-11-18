@@ -401,49 +401,49 @@
         <h3 class="features__title">Наши преимущества</h3>
 
         <ul class="features__list">
-          <li class="features__item features-item">
-            <div class="features-item__value">
-              <p class="features-item__number">900</p>
-              <p class="features-item__attribute">кв/м</p>
+          <li class="features__item">
+            <div>
+              <b>900</b>
+              <span>кв/м</span>
             </div>
-            <div class="features-item__text">
-              <h4 class="features-item__title">Площадь</h4>
-              <p class="features-item__description">Занимайтесь без очередей и толкучки</p>
-            </div>
-          </li>
-          <li class="features__item features-item">
-            <div class="features-item__value">
-              <p class="features-item__number">70</p>
-              <p class="features-item__attribute">машин</p>
-            </div>
-            <div class="features-item__text">
-              <h4 class="features-item__title">Собственная парковка</h4>
-              <p class="features-item__description">Вы всегда найдёте место для своей машины на нашей парковке</p>
+            <div>
+              <h4>Площадь</h4>
+              <p>Занимайтесь без очередей и толкучки</p>
             </div>
           </li>
-          <li class="features__item features__item-dark features-item ">
-            <p class="features-item__number">100</p>
-            <p class="features-item__title">Тренажёров</p>
-            <p class="features-item__description ">Современные тренажёры на все группы мышц</p>
-          </li>
-          <li class="features__item features-item">
-            <div class="features-item__value">
-              <p class="features-item__number">350</p>
-              <p class="features-item__attribute">мест</p>
+          <li class="features__item">
+            <div>
+              <b>70</b>
+              <span>машин</span>
             </div>
-            <div class="features-item__text">
-              <h4 class="features-item__title">Комфорт</h4>
-              <p class="features-item__description">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            <div>
+              <h4>Собственная парковка</h4>
+              <p>Вы всегда найдёте место для своей машины на нашей парковке</p>
             </div>
           </li>
-          <li class="features__item features-item">
-            <div class="features-item__value">
-              <p class="features-item__number">5+</p>
-              <p class="features-item__attribute">лет</p>
+          <li class="features__item features__item-dark">
+            <b>100</b>
+            <h4>Тренажёров</h4>
+            <p>Современные тренажёры на все группы мышц</p>
+          </li>
+          <li class="features__item ">
+            <div>
+              <b>350</b>
+              <span>мест</span>
             </div>
-            <div class="features-item__text">
-              <h4 class="features-item__title">Тренерский опыт</h4>
-              <p class="features-item__description">Добивайтесь своих целей быстрее с профессиональным тренером</p>
+            <div>
+              <h4>Комфорт</h4>
+              <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            </div>
+          </li>
+          <li class="features__item">
+            <div>
+              <b>5+</b>
+              <span>лет</span>
+            </div>
+            <div>
+              <h4>Тренерский опыт</h4>
+              <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
             </div>
           </li>
         </ul>
@@ -451,7 +451,44 @@
 
     </section>
 
-    <div data-test="offers">offers</div>
+    <!-- offers -->
+    <section class="offers wrapper" data-test="offers">
+      <h2 class="visually-hidden">Наши акции</h2>
+      <h3 class="offers__title">Акции</h3>
+
+      <article class="offers__card  offers__card-image">
+        <div>
+          <h4>Год</h4>
+          <span>4999</span>
+          <p>Безлимитный абонемент в тренажёрный зал</p>
+          <a href="#">Подробнее</a>
+        </div>
+        <picture>
+          <source srcset="img/offers/offers-desktop@1x.webp, img/offers/offers-desktop@2x.webp" width="280" height="460" type="image/webp" media="(min-width: 1366px)">
+          <source srcset="img/offers/offers-tablet@1x.webp, img/offers/offers-tablet@2x.webp" width="400" height="462" type="image/webp" media="(min-width: 768px)">
+          <source srcset="img/offers/offers-mobile@1x.webp, img/offers/offers-mobile@2x.webp" width="320" height="360" type="image/webp" media="(min-width: 320px)">
+
+          <source srcset="img/offers/offers-desktop@1x.jpg, img/offers/offers-desktop@2x.jpg" width="280" height="460" type="image/jpeg" media="(min-width: 1366px)">
+          <source srcset="img/offers/offers-tablet@1x.jpg, img/offers/offers-tablet@2x.jpg" width="400" height="462" type="image/jpeg" media="(min-width: 768px)">
+          <img src="img/offers/offers-mobile@1x.jpg" srcset="img/offers/offers-mobile@2x.jpg" width="320" height="360" alt="Довольная девушка приобрела абонемент по акции">
+        </picture>
+
+      </article>
+      <div class="offers__contain">
+        <article class="offers__card">
+          <h4>Месяц бесплатно</h4>
+          <p>Приведи друга, получи абонемент в подарок</p>
+          <a href="#">Подробнее</a>
+        </article>
+        <article class="offers__card">
+          <h4>Скидка 20%</h4>
+          <p>Корпоративный фитнес с командой</p>
+          <a href="#">Подробнее</a>
+        </article>
+      </div>
+    </section>
+
+    <div>offers</div>
     <div data-test="faq">faq</div>
     <div data-test="reviews">reviews</div>
     <div data-test="form">form</div>
