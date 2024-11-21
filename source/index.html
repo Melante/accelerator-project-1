@@ -73,13 +73,13 @@
 
       </div>
       <picture>
-        <source srcset="img/about/gym-desktop@1x.webp, img/about/gym-desktop@2x.webp" width="678" height="345" type="image/webp" media="(min-width: 1366px)">
-        <source srcset="img/about/gym-tablet@1x.webp, img/about/gym-tablet@2x.webp" width="678" height="345" type="image/webp" media="(min-width: 768px)">
-        <source srcset="img/about/gym-mobile@1x.webp, img/about/gym-mobile@2x.webp" width="320" height="280" type="image/webp" media="(min-width: 320px)">
+        <source srcset="img/about/gym-desktop@1x.webp 1x, img/about/gym-desktop@2x.webp 2x" width="678" height="345" type="image/webp" media="(min-width: 1366px)">
+        <source srcset="img/about/gym-tablet@1x.webp 1x, img/about/gym-tablet@2x.webp 2x" width="678" height="345" type="image/webp" media="(min-width: 768px)">
+        <source srcset="img/about/gym-mobile@1x.webp 1x, img/about/gym-mobile@2x.webp 2x" width="320" height="280" type="image/webp" media="(min-width: 320px)">
 
-        <source srcset="img/about/gym-desktop@1x.png, img/about/gym-desktop@2x.png" width="660" height="400" type="image/png" media="(min-width: 320px)">
-        <source srcset="img/about/gym-tablet@1x.png, img/about/gym-tablet@2x.png" width="678" height="345" type="image/png" media="(min-width: 768px)">
-        <img class="about__img" src="img/about/gym-mobile@1x.png" srcset="img/about/gym-mobile@2x.png" width="320" height="280" alt="тренажерный зал с большим количеством тренажеров">
+        <source srcset="img/about/gym-desktop@1x.png 1x, img/about/gym-desktop@2x.png 2x" width="660" height="400" type="image/png" media="(min-width: 320px)">
+        <source srcset="img/about/gym-tablet@1x.png 1x, img/about/gym-tablet@2x.png 2x" width="678" height="345" type="image/png" media="(min-width: 768px)">
+        <img class="about__img" src="img/about/gym-mobile@1x.png" srcset="img/about/gym-mobile@2x.png 2x" width="320" height="280" alt="тренажерный зал с большим количеством тренажеров">
       </picture>
 
       <div class="about__video video">
@@ -472,8 +472,8 @@
           <source srcset="img/offers/offers-tablet@1x.jpg, img/offers/offers-tablet@2x.jpg" width="400" height="462" type="image/jpeg" media="(min-width: 768px)">
           <img src="img/offers/offers-mobile@1x.jpg" srcset="img/offers/offers-mobile@2x.jpg" width="320" height="360" alt="Довольная девушка приобрела абонемент по акции">
         </picture>
-
       </article>
+
       <div class="offers__contain">
         <article class="offers__card">
           <h4>Месяц бесплатно</h4>
@@ -488,8 +488,183 @@
       </div>
     </section>
 
-    <div>offers</div>
-    <div data-test="faq">faq</div>
+    <!-- faq -->
+
+    <section class="faq" data-test="faq">
+      <div class="faq__wrapper wrapper">
+        <h2 class="visually-hidden">Основные вопросы и ответы на них</h2>
+        <h3 class="faq__title">Вопросы и ответы</h3>
+        <div class="faq__tab tab">
+          <button class="tab__button active" data-tab="faq-1" type="button">Центр</button>
+          <button class="tab__button" data-tab="faq-2" type="button">Абонемент</button>
+          <button class="tab__button" data-tab="faq-3" type="button">Услуги</button>
+          <button class="tab__button" data-tab="faq-4" type="button">Правила</button>
+        </div>
+        <div class="faq__accordion accordion">
+          <!-- faq1 -->
+          <ul class="accordion__list active" id="faq-1">
+            <li>
+              <h4>
+                Как стать членом фитнес&#8288;-&#8288;центра?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на почту.</p>
+            </li>
+            <li>
+              <h4>
+                Где можно посмотреть расписание?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+            </li>
+            <li>
+              <h4>
+                Есть кулеры в центре? Предоставляются полотенца?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>В нашем центре действительно есть кулеры с питьевой водой. Мы понимаем важность комфортной атмосферы, поэтому заботимся о Вашем удобстве. Что касается полотенец, то да, мы предоставляем их для всех посетителей. Вы можете воспользоваться ими в любом удобном для Вас месте – это поможет поддерживать чистоту и комфорт</p>
+            </li>
+            <li>
+              <h4>
+                Сколько тренеров работает в клубе и какова их квалификация?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>В нашем клубе работает команда профессиональных тренеров, каждый из которых обладает высоким уровнем квалификации и опытом в своей области.</p>
+            </li>
+          </ul>
+          <!-- faq2 -->
+          <ul class="accordion__list" id="faq-2">
+            <li>
+              <h4>
+                Занятия с тренером входят в абонемент?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+            </li>
+            <li>
+              <h4>
+                Можно ли заморозить абонемент?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>
+                Да, в нашем клубе существует возможность заморозки абонемента. Это решение принято для того, чтобы обеспечить удобство нашим клиентам, которые по разным причинам не могут посещать занятия в течение определенного времени.
+              </p>
+            </li>
+            <li>
+              <h4>
+                Есть ли лимит по посещениям тренажерного зала и групповых занятий?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>В нашем клубе нет жесткого лимита по количеству посещений как тренажерного зала, так и групповых занятий. Вы можете заниматься столько, сколько Вам нужно, в рамках действия Вашего абонемента.</p>
+            </li>
+            <li>
+              <h4>
+                Что такое семейный доступ и доступ для друзей?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Семейный доступ и доступ для друзей – это специальные условия членства в фитнес-клубе, которые позволяют нескольким людям делиться одним абонементом или получать привилегии за меньшую стоимость.</p>
+            </li>
+          </ul>
+          <!-- faq3 -->
+          <ul class="accordion__list" id="faq-3">
+            <li>
+              <h4>
+                Какие услуги предлагает Ваш фитнес-клуб?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Наш фитнес-клуб предлагает широкий спектр услуг, включая: тренажерный зал,групповые занятия, индивидуальные тренировки, SPA-процедуры и массаж, Консультации по питанию</p>
+            </li>
+            <li>
+              <h4>
+                Каковы условия бесплатного пробного посещения?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Мы предлагаем бесплатное пробное посещение, чтобы Вы могли оценить наш клуб и услуги.</p>
+            </li>
+            <li>
+              <h4>
+                Какие виды массажа Вы предлагаете?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>В нашем массажном кабинете доступны различные виды массажа, включая классический, спортивный, расслабляющий, лечебный, антицеллюлитный и тайский массаж.</p>
+            </li>
+            <li>
+              <h4>
+                Есть ли противопоказания для массажа?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Да, есть определенные противопоказания для массажа, такие как острые воспалительные процессы, травмы, кожные заболевания, а также болезни сердца и сосудов. Перед первым сеансом мы рекомендуем проконсультироваться с врачом или нашим специалистом для определения возможности массажа в Вашем конкретном случае.</p>
+            </li>
+          </ul>
+          <!-- faq4 -->
+          <ul class="accordion__list" id="faq-4">
+            <li>
+              <h4>
+                Есть в фитнес-центре дресс-код?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+            </li>
+            <li>
+              <h4>
+                Можно ли приводить с собой детей на тренировки?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Дети могут находиться в зале, если они не мешают другим посетителям и участвуют в родительских занятиях, например, в групповых тренировках, которые допускают присутствие семей. Также у нас есть детская комната и тренировки для детей и вы можете воспользоваться этими опциями.</p>
+            </li>
+            <li>
+              <h4>
+                Какие дополнительные правила посещения центра?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Убедитесь, что Вы соблюдаете временные ограничения на использование оборудования, особенно в часы пик. Если Вы используете тренажер, постарайтесь ограничить время ожидания для других посетителей. Также в нашем центре запрещено использование стеклянной посуды, курение и употребление алкогольных напитков.</p>
+            </li>
+            <li>
+              <h4>
+                Нужна ли медицинская справка для посещения залов и бассейна?
+              </h4>
+              <button class="accordion__button" type="button">
+                <span class="visually-hidden">Открыть ответ на данный вопрос</span>
+              </button>
+              <p>Для посещения залов и бассейна в большинстве фитнес-центров медицинская справка не требуется, но если у Вас есть хронические заболевания или Вы начинаете заниматься спортом после длительного перерыва лучше проконсультироваться и принести рекомендации от</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <div>faq</div>
     <div data-test="reviews">reviews</div>
     <div data-test="form">form</div>
   </main>

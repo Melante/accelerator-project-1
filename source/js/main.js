@@ -5,3 +5,4 @@
 
 import './tabs.js';
 import './main-swiper.js';
+import './accordion.js';

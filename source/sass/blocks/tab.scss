@@ -1,0 +1,18 @@
+.tab__button {
+  font-size: 16px;
+  line-height: 1;
+  padding: 14px;
+  background-color: var(--back-secondary, #f8f9fc);
+  border: 1px solid rgba(16, 38, 84, 0.2);
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 18px;
+  }
+}
+
+.tab__button.active {
+  border: none;
+  background: var(--button-gradient, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+  color: var(--text-primary-light, #ffffff);
+}
