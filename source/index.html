@@ -251,9 +251,9 @@
       <h2 class="visually-hidden">Наше жюри на соревнованиях</h2>
       <div class="juri__slider">
         <h3 class="juri__title">Жюри</h3>
-        <div class="juri__swiper">
+        <div class="juri__container">
 
-          <div class="juri__container swiper wrapper">
+          <div class="juri__swiper swiper wrapper">
 
             <div class="juri__wrapper swiper-wrapper">
               <!-- Slides -->
@@ -384,9 +384,9 @@
           </div>
 
         </div>
-        <div class="swiper-button">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+        <div class="juri__button swiper-button">
+          <div class="juri__button-prev swiper-button-prev"></div>
+          <div class="juri__button-next swiper-button-next"></div>
         </div>
 
       </div>
@@ -664,9 +664,110 @@
       </div>
     </section>
 
-    <div>faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
+    <section class="reviews wrapper" data-test="reviews">
+      <h2 class="visually-hidden">Здесь собраны все отзывы о нашей работе и о тренажерном зале</h2>
+      <h3 class="reviews__title">Отзывы</h3>
+      <div class="reviews__container">
+        <div class="reviews__swiper swiper">
+          <div class="reviews__wrapper swiper-wrapper">
+            <!-- Slides -->
+            <div class="reviews__slide swiper-slide">
+              <picture>
+                <source srcset="img/reviews/reviews-img1-tablet@1x.webp,img/reviews/reviews-img1-tablet@2x.webp" width="80" height="80" type="image/webp" media="min-width: 768">
+                <source srcset="img/reviews/reviews-img1-mobile@1x.webp, img/reviews/reviews-img1-mobile@2x.webp" width="68" height="68" type="image/webp" media="min-width: 320px">
+
+                <source srcset="img/reviews/reviews-img1-tablet@1x.jpg, img/reviews/reviews-img1-tablet@2x.jpg" width="80" height="80" type="image/jpeg" media="min-width: 768px">
+                <img src="img/reviews/reviews-img1-mobile@1x.jpg" srcset="img/reviews/reviews-img1-mobile@2x.jpg" width="68" height="68" alt="Анна Орлова">
+              </picture>
+              <h4>Анна Орлова</h4>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+            <div class="reviews__slide swiper-slide">
+              <picture>
+                <source srcset="img/reviews/reviews-img1-tablet@1x.webp,img/reviews/reviews-img1-tablet@2x.webp" width="80" height="80" type="image/webp" media="min-width: 768">
+                <source srcset="img/reviews/reviews-img1-mobile@1x.webp, img/reviews/reviews-img1-mobile@2x.webp" width="68" height="68" type="image/webp" media="min-width: 320px">
+
+                <source srcset="img/reviews/reviews-img1-tablet@1x.jpg, img/reviews/reviews-img1-tablet@2x.jpg" width="80" height="80" type="image/jpeg" media="min-width: 768px">
+                <img src="img/reviews/reviews-img1-mobile@1x.jpg" srcset="img/reviews/reviews-img1-mobile@2x.jpg" width="68" height="68" alt="Анна Орлова">
+              </picture>
+              <h4>Екатерина Павлова</h4>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+            <div class="reviews__slide swiper-slide">
+              <picture>
+                <source srcset="img/reviews/reviews-img1-tablet@1x.webp,img/reviews/reviews-img1-tablet@2x.webp" width="80" height="80" type="image/webp" media="min-width: 768">
+                <source srcset="img/reviews/reviews-img1-mobile@1x.webp, img/reviews/reviews-img1-mobile@2x.webp" width="68" height="68" type="image/webp" media="min-width: 320px">
+
+                <source srcset="img/reviews/reviews-img1-tablet@1x.jpg, img/reviews/reviews-img1-tablet@2x.jpg" width="80" height="80" type="image/jpeg" media="min-width: 768px">
+                <img src="img/reviews/reviews-img1-mobile@1x.jpg" srcset="img/reviews/reviews-img1-mobile@2x.jpg" width="68" height="68" alt="Анна Орлова">
+              </picture>
+              <h4>Ксения Лаврова</h4>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+            ...
+          </div>
+
+        </div>
+        <div class="reviews__button swiper-button">
+          <div class="reviews__button-prev swiper-button-prev"></div>
+          <div class="reviews__button-next swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-container" data-test="form">
+      <div class="form-container__form form">
+        <h2 class="visually-hidden">Заполните форму на бесплатное занятие</h2>
+        <div class="form__wrapper wrapper">
+          <h3 class="form__title">Бесплатное занятие</h3>
+          <div class="form__container">
+            <form class="form__fill" action=" https://echo.htmlacademy.ru/" method="post" novalidate data-js-form>
+              <p class="form__group">
+                <label class="form__label" for="name-id">Имя</label>
+                <input class="form__input user" id="name-id" type="text" name="name" pattern="(/^[А-Яа-яЁё\s-]{2,20}$/)" required>
+
+              </p>
+              <p class="form__group">
+                <label class=" form__label" for="phone-id">Телефон</label>
+                <input class="form__input phone" id="phone-id" type="number" name="phone" pattern="^/+8-/(/d{3}/)-/d{3}-/d{2}-/d{2}$" title="+8-(xxx)-xxx-xx-xx" required>
+
+              </p>
+              <button class="form__button button button--dark" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-container__contact contact">
+        <div class="contact__wrapper wrapper">
+          <h3 class="contact__title">Контакты</h3>
+          <div class="contact__container">
+            <div class="contact__group">
+              <div class="contact__adres">
+                <h4 class="contact__name">Адрес:</h4>
+                <p class="contact__text">г. Омск, ул. 60 лет Октября, 7</p>
+              </div>
+              <div class="contact__time">
+                <h4 class="contact__name">График работы:</h4>
+                <p class="contact__text">Пн-Вс: с 8:00 до 22:00</p>
+              </div>
+
+            </div>
+            <div class="contact__group">
+              <div class="contact__phone">
+                <h4 class="contact__name">Телефон:</h4>
+                <p class="contact__text">8 800 555-55-55</p>
+              </div>
+              <div class="contact__email">
+                <h4 class="contact__name">Email:</h4>
+                <p class="contact__text">oмск@supergym.ru</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer class="main-footer" data-test="footer">
     <div data-test="footer">footer</div>

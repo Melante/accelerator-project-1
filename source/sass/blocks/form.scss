@@ -1,0 +1,118 @@
+.form {
+  padding-top: 71px;
+  padding-bottom: 70px;
+  background-color: var(--back-dark, #102654);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+
+    text-align: left;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $tablet-width) {
+    max-width: 440px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 477px;
+  }
+}
+
+.form__title {
+  margin-bottom: 23px;
+  color: var(--text-primary-light, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 1;
+  }
+}
+
+.form__fill {
+  display: grid;
+  gap: 24px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 30px;
+  }
+}
+
+.form__group {
+  position: relative;
+  margin: 0;
+}
+
+
+.form__input {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid var(--button-border-bottom, #74819c);
+  opacity: 0.5;
+  background-color: transparent;
+  color: var(--text-primary-light, #ffffff);
+  outline: none;
+  transition: outline 0.5s;
+}
+
+
+.form__input:hover {
+  opacity: 1;
+  border: none;
+  border-bottom: 1px solid var(--button-border-bottom, #74819c);
+}
+
+.form__input:focus {
+  padding: 10px 4px;
+  border: 1px solid var(--button-border-light, #ffffff);
+  transition: outline 0.5s;
+}
+
+.form__input:invalid {
+  outline: none;
+  border-bottom: 1px solid var(--button-border-bottom, #74819c);
+}
+
+
+.form__input--error {
+  border-bottom: 1px solid var(--form-error, #ff121f);
+}
+
+.form__label {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  font-size: 14px;
+  line-height: 1.57;
+  color: var(--text-primary-light, #ffffff);
+  opacity: 0.4;
+  transition: font-size 0.5s;
+}
+
+.form__input:focus ~ .form__label {
+  font-size: 0;
+  transition: font-size 0.5s;
+}
+
+.form__button {
+  padding: 22px;
+  margin-top: 11px;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 25px;
+    margin-top: 0;
+    grid-column: 1 /-1;
+  }
+}
