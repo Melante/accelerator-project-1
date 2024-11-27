@@ -2,20 +2,20 @@
   position: relative;
   display: grid;
   text-align: left;
-  margin-top: 40px;
+  padding-top: 40px;
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 60px;
+    padding-top: 60px;
     text-align: center;
     margin-bottom: 120px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 120px;
+    padding-top: 120px;
     margin-bottom: 236px;
   }
 }
