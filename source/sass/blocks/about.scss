@@ -3,7 +3,7 @@
   display: grid;
   text-align: left;
   padding-top: 40px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -11,12 +11,12 @@
     justify-content: space-between;
     padding-top: 60px;
     text-align: center;
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 120px;
-    margin-bottom: 236px;
+    padding-bottom: 236px;
   }
 }
 
@@ -120,12 +120,12 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: calc(100% - 85px);
+    top: calc(100% - 205px);
     left: calc(50% - 135px);
   }
 
   @media (min-width: $desktop-width) {
-    top: calc(100% - 119px);
+    top: calc(100% - 355px);
     left: calc(50% - 180px);
   }
 }

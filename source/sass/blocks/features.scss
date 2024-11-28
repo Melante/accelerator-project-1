@@ -133,7 +133,8 @@
 }
 
 .features__item div {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 .features__item b {
@@ -178,7 +179,7 @@
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    margin-bottom: 13px;
     font-size: 20px;
     line-height: 1;
   }

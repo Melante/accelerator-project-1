@@ -51,8 +51,8 @@
 
   @media (min-width: $tablet-width) {
     font-size: 22px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 33px;
+    margin-bottom: 31px;
     margin-right: 10px;
     transition: margin-bottom 0.5s;
   }
@@ -67,8 +67,8 @@
 // в макете планшетной версии последний элемент отличается от остальных. Сделано, чтоб пройти PP
 .accordion__list li:last-child h4 {
   @media (min-width: $tablet-width) {
-    margin-top: 23px;
-    margin-bottom: 23px;
+    margin-top: 24px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $desktop-width) {

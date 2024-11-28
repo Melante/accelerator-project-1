@@ -13,6 +13,7 @@
     max-width: 100%;
     min-width: 270px;
     height: 170px;
+    z-index: 2;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,6 +37,7 @@
 
   @media (min-width: $tablet-width) {
     left: calc(50% - 26px);
+    z-index: 3;
   }
 
   @media (min-width: $desktop-width) {

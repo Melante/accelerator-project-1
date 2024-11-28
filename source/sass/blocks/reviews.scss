@@ -20,7 +20,7 @@
   @media (min-width: $tablet-width) {
     font-size: 54px;
     line-height: 1;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
@@ -41,6 +41,7 @@
 }
 
 .reviews__swiper.swiper {
+  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
   margin: 0 auto;
   height: auto;
   width: 240px;
@@ -48,12 +49,10 @@
 
   @media (min-width: $tablet-width) {
     width: 500px;
-    height: 242px;
   }
 
   @media (min-width: $desktop-width) {
     width: 560px;
-    height: 258px;
   }
 }
 
@@ -61,15 +60,14 @@
 
 }
 
+
 .reviews__slide.swiper-slide {
   padding: 30px 25px 25px;
-  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
   background-color: var(--back-secondary-dark, #1c3374);
   text-align: center;
   width: auto;
   height: 328px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -130,6 +128,9 @@
     margin-left: 120px;
     font-size: 16px;
     line-height: 1.5;
+    height: 120px;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   @media (min-width: $desktop-width) {
