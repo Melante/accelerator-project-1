@@ -1,7 +1,6 @@
 const tabLinks = document.querySelectorAll('.tab__button');
 const tabContents = document.querySelectorAll('.accordion__list');
-const buttons = document.querySelectorAll('.accordion__button');
-
+const items = document.querySelectorAll('.accordion__list li');
 
 tabLinks.forEach((link) => {
   link.addEventListener('click', () => {
@@ -16,13 +15,19 @@ tabLinks.forEach((link) => {
   });
 });
 
+items.forEach((item) => {
+  const header = item.querySelector('h4');
+  const button = item.querySelector('.accordion__button');
+  header.addEventListener('click', () => {
 
-buttons.forEach((button) =>
-
-  button.addEventListener('click', () => {
-    const parent = button.parentNode;
-    parent.classList.toggle('active');
+    item.classList.toggle('active');
     button.classList.toggle('accordion__button--close');
-  })
-);
+
+    if (button.classList.contains('accordion__button--close')) {
+      button.querySelector('span').textContent = 'Открыть ответ на данный вопрос';
+    } else {
+      button.querySelector('span').textContent = 'Закрыть ответ на данный вопрос';
+    }
+  });
+});
 
