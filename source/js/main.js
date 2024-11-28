@@ -4,6 +4,7 @@
 // import 'swiper/css';
 
 import './tabs.js';
+import './video.js';
 import './juri-swiper.js';
 import './accordion.js';
 import './reviews-swiper.js';
