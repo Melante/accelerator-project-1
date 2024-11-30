@@ -724,18 +724,24 @@
         <div class="form__wrapper wrapper">
           <h3 class="form__title">Бесплатное занятие</h3>
           <div class="form__container">
-            <form class="form__fill" action=" https://echo.htmlacademy.ru/" method="post">
+            <form class="form__fill" action=" https://echo.htmlacademy.ru/" method="post" novalidate>
               <p class="form__group">
-                <label class="form__label" for="name-id">Имя</label>
-                <input class="form__input user" id="name-id" type="text" name="name" pattern="(/^[А-Яа-яЁё\s-]{2,20}$/)" required>
+                <label class="form__label ">
+                  <input class="form__input user" id="name-id" type="text" name="name" placeholder="Имя" pattern="^[a-zA-Zа-яА-ЯЁё \-]+$" data-error-message="Разрешено символы латиницы, кириллицы, знаки дефиса и пробелы" required>
 
+                </label>
+                <span class="form__error name-id-error"></span>
               </p>
+
               <p class="form__group">
-                <label class=" form__label" for="phone-id">Телефон</label>
-                <input class="form__input phone" id="phone-id" type="number" name="phone" pattern="^/+8-/(/d{3}/)-/d{3}-/d{2}-/d{2}$" title="+8-(xxx)-xxx-xx-xx" required>
-
+                <label class=" form__label" for="phone-id">
+                  <input class="form__input phone" id="phone-id" type="tel" name="phone" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" data-error-message="Неправильно введен номер телефона" required>
+                </label>
+                <span class="form__error phone-id-error"></span>
               </p>
+
               <button class="form__button button button--dark" type="submit">Отправить</button>
+
             </form>
           </div>
         </div>

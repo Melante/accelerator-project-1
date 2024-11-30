@@ -1,103 +1,95 @@
-// const form = document.querySelector('.form-fill');
-// const nameInput = form.querySelector('.user');
-// const phoneInput = form.querySelector('.password');
-// const button = form.querySelector('.form__button');
+const form = document.querySelector('.form__fill');
+const inputList = Array.from(document.querySelectorAll('.form__input'));
+const formErrorElement = document.querySelector('.form__button-error');
+const buttonElement = document.querySelector('.form__button');
 
-// function updateSubmitButtonState() {
-//   const name = nameInput.value; // login
-//   const phone = phoneInput.value; // password
+startValidation();
 
-//   // button, что оба поля заполнены
-//   button.disabled = !name || !phone;
-// }
+function startValidation() {
 
-// nameInput.addEventListener('input', updateSubmitButtonState);
-// phoneInput.addEventListener('input', updateSubmitButtonState);
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    toggleButton();
+    if (hasInvalidInput()) {
+      formError();
+      inputList.forEach((inputElement) => {
+        checkInputValidity(inputElement);
+        toggleInputError(inputElement);
+      });
+    }
+  });
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener('input', () => {
+      checkInputValidity(inputElement);
+      toggleButton();
+    });
+    inputElement.addEventListener('blur', () => {
+      toggleInputError(inputElement);
+    });
+    inputElement.addEventListener('focus', () => {
+      toggleErrorSpan(inputElement);
+    });
 
+  });
+}
 
-// form.addEventListener('submit', (evt) => {
-//   evt.preventDefault();
+function checkInputValidity(inputElement) {
+  if (inputElement.validity.patternMismatch) {
+    inputElement.setCustomValidity(inputElement.dataset.errorMessage);
+  } else {
+    inputElement.setCustomValidity(checkLengthMismatch(inputElement));
+  }
+}
 
-//   const name = nameInput.value;
-//   const phone = phoneInput.value;
+function checkLengthMismatch(inputElement) {
+  if (inputElement.type !== 'text') {
+    return '';
+  }
 
-//   // Проверяем, что поля заполнены
+  return '';
+}
 
+function hasInvalidInput() {
+  return (
+    inputList.some((inputElement) => !inputElement.validity.valid)
+  );
+}
 
-//   // Проверяем имя
-//   if (!isValidName(name)) {
-//     nameInput.classList.add('form__input--error');
-//   } else {
-//     nameInput.classList.remove('form__input--error');
-//   }
+function toggleErrorSpan(inputElement, errorMessage){
+  const errorElement = document.querySelector(`.${inputElement.id}-error`);
+  if (errorMessage) {
+    inputElement.classList.add('form__type-input-error');
+    errorElement.textContent = errorMessage;
+    errorElement.classList.add('form__error-active');
+  } else {
+    inputElement.classList.remove('form__type-input-error');
+    errorElement.textContent = '';
+    errorElement.classList.remove('form__error-active');
+  }
+}
 
-//   // Проверяем телефон
-//   if (!isValidPhone(phone)) {
-//     phoneInput.classList.add('form__input--error');
-//     return;
-//   } else {
-//     phoneInput.classList.remove('form__input--error');
-//   }
+function toggleButton() {
+  if (hasInvalidInput()) {
+    buttonElement.classList.add('form__button-inactive');
+    buttonElement.setAttribute('aria-disabled', 'true');
+  } else {
+    buttonElement.classList.remove('form__button-inactive');
+    buttonElement.setAttribute('aria-disabled', 'false');
 
-//   // Если всё в порядке, отправляем форму
-//   form.submit();
-// });
+  }
+}
 
-// function isValidName(name) {
-//   const pattern = /^[А-Яа-яЁё\s-]{2,20}$/;
-//   return pattern.test(name);
-// }
+function formError() {
+  const errorMessage = 'Заполните все поля для отправки формы.';
+  formErrorElement.textContent = errorMessage;
+}
 
-// function isValidPhone(phone) {
-//   const pattern = /^\d{3}-\d{3}-\d{4}$/;
-//   return pattern.test(phone);
-// }
+function toggleInputError(inputElement) {
+  if (!inputElement.validity.valid) {
+    toggleErrorSpan(inputElement, inputElement.validationMessage);
+  } else {
+    toggleErrorSpan(inputElement);
+  }
+}
 
-// updateSubmitButtonState();
-
-
-// // const form = document.querySelector('.form-fill');//.my-form
-// // const nameInput = form.querySelector('.user');// const loginInput username
-// // const phoneInput = form.querySelector('.password'); //passwordInput password
-
-
-// // form.addEventListener('submit', (evt) => {
-// //   // Отменяем действие по умолчанию
-// //   evt.preventDefault();
-
-// //   // Получаем значения полей формы
-// //   const name = nameInput.value; //login
-// //   const phone = phoneInput.value; //password
-
-
-// //   // Проверяем, что поля заполнены
-// //   if (!name || !phone) {
-// //     return;
-// //   }
-
-// //   // Проверяем, что имя пользователя содержит только буквы и цифры
-// //   if (!isValidName(name)) {
-// //     nameInput.classList.add('form__input--error');
-// //     return;
-// //   }
-
-// //   // Проверяем, что пароль содержит хотя бы одну заглавную букву, одну строчную букву и одну цифру
-// //   if (!isValidPhone(phone)) {
-// //     return;
-// //   }
-
-// //   // Если всё в порядке, отправляем форму
-// //   form.submit();
-// // });
-
-// // function isValidName(name) {
-// //   // Проверка имени регулярным выражением
-// //   const pattern = /^[А-Яа-я]{2,20}$/;
-// //   return pattern.test(name);
-// // }
-
-// // function isValidPhone(phone) {
-// //   // Проверка пароля регулярным выражением
-// //   const pattern = /^\d{3}-\d{3}-\d{4}$/;
-// //   return pattern.test(phone);
-// // }
+startValidation();

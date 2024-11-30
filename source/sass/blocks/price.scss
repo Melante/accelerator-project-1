@@ -62,6 +62,7 @@
   }
 }
 
+
 .price__link::after {
   content: "";
   position: absolute;
@@ -76,6 +77,19 @@
     bottom: -10px;
   }
 }
+
+.price__link:active::after {
+  background: var(--button-tab, #d10a42);
+}
+
+.price__link:hover::after {
+  background: var(--button-border-light-secondary, #787878);
+}
+
+.price__link:focus::after {
+  background: var(--button-border-dark, #102654);
+}
+
 
 .price__link.active::after {
   width: 100%;

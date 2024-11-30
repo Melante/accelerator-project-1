@@ -10,6 +10,11 @@
   display: grid;
   align-items: center;
   border-bottom: 1px solid var(--button-border-bottom, #74819c);
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    box-shadow: 0 1px 0 0  var(--button-border-bottom, #74819c);
+  }
 }
 
 .accordion__list li:first-child {
@@ -74,6 +79,7 @@
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
+    top: 23px;
   }
 }
 
@@ -115,6 +121,7 @@
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
+    top: 23px;
   }
 }
 
@@ -123,7 +130,7 @@
   content: "";
   display: block;
   position: absolute;
-  top: calc(50% - 1px);
+  top: calc(50% - 2px);
   right: calc(50% - 7px);
   height: 1px;
   width: 14px;
@@ -185,8 +192,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
+    margin-top: 1px;
     margin-right: 200px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 }

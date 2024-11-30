@@ -1,6 +1,8 @@
 .price-item {
   position: relative;
   display: grid;
+  grid-template-columns: repeat(1fr, auto);
+  grid-template-rows: 1fr;
   gap: 18px;
   width: 100%;
   padding: 50px 42px;
@@ -21,6 +23,7 @@
   }
 }
 
+.price-item:active,
 .price-item:hover,
 .price-item:focus {
   border: none;
