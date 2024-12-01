@@ -17,6 +17,7 @@ function startValidation() {
         toggleInputError(inputElement);
       });
     }
+    form.submit();
   });
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {

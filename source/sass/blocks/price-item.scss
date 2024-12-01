@@ -8,6 +8,7 @@
   padding: 50px 42px;
   margin: 0 auto;
   background-color: var(--back-primary, #ffffff);
+  transition: all 0.5s;
 
   @media (min-width: $tablet-width) {
     min-width: 360px;
@@ -29,6 +30,7 @@
   border: none;
   box-shadow: 0 0 0 7px none  inset;
   background: var(--text-secondary-gradient, linear-gradient(129deg, #d10a42 0%, #0041ca 100%));
+  transition: all 0.5s;
 }
 
 .price-item:hover::before,

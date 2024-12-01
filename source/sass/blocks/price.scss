@@ -78,18 +78,19 @@
   }
 }
 
-.price__link:active::after {
-  background: var(--button-tab, #d10a42);
-}
 
 .price__link:hover::after {
   background: var(--button-border-light-secondary, #787878);
+  opacity: 0.1;
 }
 
 .price__link:focus::after {
   background: var(--button-border-dark, #102654);
 }
 
+.price__link:active::after {
+  background: var(--button-tab, #d10a42);
+}
 
 .price__link.active::after {
   width: 100%;

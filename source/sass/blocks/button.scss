@@ -20,52 +20,64 @@
   border: 2px solid var(--button-border-light, #ffffff);
   background-color: transparent;
   color: var(--text-primary-light, #ffffff);
+  transition: all 0.5s;
 
   &:hover {
     background-color: var(--back-primary, #ffffff);
     color: var(--text-secondary, #103aae);
+    transition: all 0.5s;
   }
 
   &:focus {
     border: 2px solid var(--button-border-verydark, #000000);
     background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s;
   }
 
   &:active {
     background-color: var(--back-primary, #ffffff);
     color: var(--text-primary, #102654);
+    transition: all 0.5s;
   }
 }
 
 // Блокировка кнопки на темном фоне
-.button--disableddark {
+.button--disableddark,
+.button--dark:disabled {
   border: 2px solid var(--button-border-light, #ffffff);
   opacity: 0.5;
+  transition: all 0.5s;
 }
 
 .button--light {
   border: 2px solid var(--button-border-dark, #102654);
   background-color: var(--back-primary, #ffffff);
+  transition: all 0.5s;
 
   &:hover {
     background: var(--button-gradient, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
     color: var(--text-primary-light, #ffffff);
+    transition: all 0.5s;
   }
 
   &:focus {
     border: 2px solid var(--button-border-verydark, #000000);
     background: linear-gradient(151deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
+    transition: all 0.5s;
   }
 
   &:active {
     background-color: var(--back-primary, #ffffff);
     color: var(--text-primary-light, #ffffff) 0.7;
+    transition: all 0.5s;
   }
 }
 
 // Блокировка кнопки на светлом фоне
-.button--disabledlight {
+.button--disabledlight,
+.button--light:disabled {
   border: 2px solid var(--button-border-dark, #102654);
   background-color: var(--back-primary, #ffffff);
   opacity: 0.3;
+  transition: all 0.5s;
 }

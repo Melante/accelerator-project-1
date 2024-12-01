@@ -15,6 +15,8 @@
 
 .juri__slider {
   position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .juri__title {
@@ -138,7 +140,6 @@
 }
 
 .juri__button.swiper-button {
-  // position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,13 +152,19 @@
 
 .juri__button-prev.swiper-button-prev {
   @media (min-width: $tablet-width) {
-    left: 45px;
+    left: 35px;
+    top: calc(50% + 48px);
+    width: 50px;
+    height: 50px;
   }
 }
 
 .juri__button-next.swiper-button-next {
   @media (min-width: $tablet-width) {
-    right: 45px;
+    right: 35px;
+    top: calc(50% + 48px);
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -169,13 +176,14 @@
     content: "";
     display: block;
     position: relative;
-    top: calc(50% + 25px);
+    left: calc(50% - 27px);
+    top: calc(100% - 48px);
     mask-image: url("/__spritemap#sprite-arrow-view");
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 18px 32px;
     background-color: var(--button-border-dark, #102654);
-    width: 40px;
+    width: 50px;
     height: 300px;
   }
 }
@@ -183,7 +191,34 @@
 
 .juri__button-next.swiper-button-next::after {
   @media (min-width: $tablet-width) {
+    left: calc(50% - 23px);
     transform: rotate(180deg);
   }
+}
+
+.juri__button-prev.swiper-button-prev:hover,
+.juri__button-next.swiper-button-next:hover {
+  border: 1px solid var(--button-border-dark, #102654);
+  border-radius: 50%;
+}
+
+.juri__button-prev.swiper-button-prev:focus,
+.juri__button-next.swiper-button-next:focus {
+  background: var(--back-button, #e8e8e8);
+  border: 1px solid var(--button-border-dark, #102654);
+  border-radius: 50%;
+}
+
+.juri__button-prev.swiper-button-prev:active,
+.juri__button-next.swiper-button-next:active {
+  background: var(--button-border-dark, #102654);
+
+  border: 1px solid var(--button-border-dark, #102654);
+  border-radius: 50%;
+}
+
+.juri__button-prev.swiper-button-prev:active::after,
+.juri__button-next.swiper-button-next:active::after {
+  background-color: var(--back-primary, #ffffff);
 }
 

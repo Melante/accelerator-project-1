@@ -99,6 +99,7 @@
   border-radius: 50%;
   background: var(--button-gradient, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
   z-index: 3;
+  transition: all 0.5s;
 
   @media (min-width: $tablet-width) {
     top: calc(50% - 53px);
@@ -110,6 +111,38 @@
     height: 72px;
     top: calc(50% - 67px);
     left: calc(50% - 36px);
+  }
+
+  &:hover {
+    background: var(--back-primary, #ffffff);
+    transition: all 0.5s;
+  }
+
+  &:focus {
+    background: var(--back-secondary-light, #c8c9cc);
+    transition: all 0.5s;
+  }
+
+  &:active {
+    width: 58px;
+    height: 58px;
+    top: calc(50% - 29px);
+    left: calc(50% - 37px);
+    background: var(--back-primary, #ffffff);
+
+    @media (min-width: $tablet-width) {
+      top: calc(50% - 56px);
+      left: calc(50% - 29px);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: calc(50% - 60px);
+      left: calc(50% - 29px);
+    }
+  }
+
+  &:disabled {
+    background: var(--back-primary, #ffffff);
   }
 }
 
@@ -123,11 +156,35 @@
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: var(--button-border-light, #ffffff);
+  transition: all 0.5s;
 
   @media (min-width: $desktop-width) {
     width: 17px;
     height: 17px;
   }
+}
+
+.video__play:hover::before {
+  background-color: var(--back-dark, #102654);
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+
+.video__play:focus::before {
+  background-color: var(--back-dark, #102654);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.video__play:active::before {
+  background-color: var(--back-dark, #102654);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.video__play:disabled::before {
+  background-color: var(--back-dark, #102654);
+  opacity: 0.3;
 }
 
 .video__play::after {
@@ -137,9 +194,37 @@
   border: 2px solid var(--back-banner, #ed0233);
   border-radius: 50%;
   opacity: 0.2;
-
+  transition: all 0.5s;
 
   @media (min-width: $desktop-width) {
     padding: 48px;
   }
+}
+
+.video__play:hover::after {
+  border: 2px solid var(--back-dark, #102654);
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+
+.video__play:focus::after {
+  border: 2px solid var(--back-dark, #102654);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.video__play:active::after {
+  padding: 41px;
+  border: 2px solid var(--back-dark, #102654);
+  opacity: 1;
+  transition: all 0.5s;
+
+  @media (min-width: $desktop-width) {
+    padding: 48px;
+  }
+}
+
+.video__play:disabled::after {
+  border: 2px solid var(--back-dark, #102654);
+  opacity: 0.3;
 }

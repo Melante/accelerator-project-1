@@ -75,6 +75,7 @@
   font-weight: 700;
   text-decoration: none;
   color: var(--text-primary-light, #ffffff);
+  transition: color 0.5s, opacity 0.5s, border 0.5s, padding 0.5s, margin 0.5s;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -84,9 +85,32 @@
   @media (min-width: $desktop-width) {
     font-size: 26px;
     margin: 0;
-
     line-height: 1;
   }
+}
+
+.hero__phone:hover {
+  color: var(--text-secondary-dark, #1c3374);
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.hero__phone:focus {
+  color: var(--text-secondary-dark, #1c3374);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.hero__phone:active {
+  color: var(--text-primary, #102654);
+  border-bottom: 1px solid var(--text-primary, #102654);
+  padding-bottom: 6px;
+  margin-bottom: -7px;
+  transition: all 0.5s;
+}
+
+.hero__phone:disabled {
+  opacity: 0.5;
 }
 
 .hero__about {

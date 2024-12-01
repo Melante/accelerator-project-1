@@ -152,6 +152,26 @@
   color: var(--text-secondary-dark, #1c3374);
   border-bottom: 1px solid var(--button-border-bottom, #74819c);
   z-index: 1; // нужен, чтобы белый фон  не перекрывал текст
+  transition: padding 0.5s, margin 0.5s;
+}
+
+.offers__card a:hover {
+  opacity: 0.8;
+}
+
+.offers__card a:focus {
+  padding: 10px;
+  margin-top: -10px;
+  margin-bottom: -7px;
+  margin-left: -10px;
+  border: none;
+  box-shadow: 0 0 0 1px var(--button-border-dark-secondary, #1c3374);
+  transition: padding 0.5s, margin 0.5s;
+}
+
+.offers__card a:disabled {
+  cursor: default;
+  opacity: 0.3;
 }
 
 .offers__card-image {
@@ -227,6 +247,15 @@
 .offers__card-image a {
   color: var(--text-primary-light, #ffffff);
   border-bottom: 1px solid var(--button-border-light, #ffffff);
+  transition: padding 0.5s, margin 0.5s;
+}
+
+.offers__card-image a:focus {
+  margin-left: -10px;
+  border: none;
+  box-shadow: 0 0 0 1px var(--button-border-light, #ffffff);
+  padding: 10px;
+  transition: padding 0.5s, margin 0.5s;
 }
 
 .offers__card-image img {
