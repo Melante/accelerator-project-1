@@ -71,7 +71,6 @@
   }
 }
 
-
 .juri__slide.swiper-slide img {
   display: block;
   margin: 0 auto;
@@ -149,7 +148,6 @@
   max-width: 1500px;
 }
 
-
 .juri__button-prev.swiper-button-prev {
   @media (min-width: $tablet-width) {
     left: 35px;
@@ -188,7 +186,6 @@
   }
 }
 
-
 .juri__button-next.swiper-button-next::after {
   @media (min-width: $tablet-width) {
     left: calc(50% - 23px);
@@ -221,4 +218,3 @@
 .juri__button-next.swiper-button-next:active::after {
   background-color: var(--back-primary, #ffffff);
 }
-

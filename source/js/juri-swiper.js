@@ -7,19 +7,19 @@ const juriSwiper = new Swiper('.juri__swiper', {
   direction: 'horizontal',
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.juri__button-next',
+    prevEl: '.juri__button-prev',
   },
   speed: 500,
   breakpoints: {
     320: {
       slidesPerView: 1,
-      slidesPerGroup: 1,
       centeredSlides: 1,
     },
     768: {
       slidesPerView: 2,
       spaceBetween:40,
+
     },
     1366: {
       slidesPerView: 4,
@@ -29,4 +29,5 @@ const juriSwiper = new Swiper('.juri__swiper', {
 });
 
 juriSwiper.slideReset();
+
 

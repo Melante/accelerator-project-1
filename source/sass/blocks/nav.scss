@@ -20,25 +20,19 @@
 }
 
 .nav__link {
-  // padding: 5px 10px;
-  // margin-left: -10px;
-  // margin-right: -10px;
+  margin: 0;
   color: var(--text-primary-light, #ffffff);
   text-decoration: none;
   transition: border 0.5s, margin 0.5s, padding 0.5s;
 }
 
 .nav__link:hover {
-  // padding: 0;
   padding-bottom: 5px;
-
-  // margin: 0;
   border-bottom: 1px solid var(--button-border-light, #ffffff);
 }
 
 .nav__link:focus {
   padding: 5px 10px;
-
   margin-left: -11px;
   margin-right: -11px;
   border: 1px solid var(--button-border-light, #ffffff);
