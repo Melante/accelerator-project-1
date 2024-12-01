@@ -1,11 +1,11 @@
 .form {
   padding-top: 71px;
-  padding-bottom: 70px;
+  padding-bottom: 36px;
   background-color: var(--back-dark, #102654);
 
   @media (min-width: $tablet-width) {
     padding-top: 61px;
-    padding-bottom: 60px;
+    padding-bottom: 25px;
     text-align: center;
   }
 
@@ -91,12 +91,6 @@
   transition: outline 0.5s;
 }
 
-// .form__input:invalid {
-//   outline: none;
-//   border-bottom: 1px solid var(--button-border-bottom, #74819c);
-// }
-
-
 .form__input:disabled {
   cursor: default;
   opacity: 0.4;
@@ -108,16 +102,6 @@
   opacity: 0.7;
 }
 
-.form__label {
-  // position: absolute;
-  // top: 13px;
-  // left: 0;
-  // font-size: 14px;
-  // line-height: 1.57;
-  // color: var(--text-primary-light, #ffffff);
-  // opacity: 0.4;
-  // transition: font-size 0.5s;
-}
 
 .form__input:focus ~ .form__label {
   font-size: 0;

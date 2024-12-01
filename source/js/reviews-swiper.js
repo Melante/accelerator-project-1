@@ -1,5 +1,9 @@
-const swiper = new Swiper('.reviews__swiper', {
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation } from 'swiper/modules';
 
+const reviewsSwiper = new Swiper('.reviews__swiper', {
+  modules: [Navigation],
   // Optional parameters
   direction: 'horizontal',
   loop: false,
@@ -14,3 +18,5 @@ const swiper = new Swiper('.reviews__swiper', {
   },
 
 });
+
+reviewsSwiper.slideReset();
